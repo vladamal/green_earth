@@ -1,0 +1,99 @@
+
+@media only screen and (max-width: 968px) {
+    #input_email_wrapper {
+        button {
+            width: 63%;
+            display: none;
+        }
+    }
+    #sendButton {
+        display: block !important;
+        width: 35%;
+        margin: 13px;
+    }
+    .displayElement {
+        display: initial !important;
+    }
+    footer, #subscribe {
+        flex-direction: column;
+        [class*="col-"] {
+            padding: 5px 0px;
+        }
+        * {
+            justify-content: center;
+        }
+    }
+    footer {
+        h3 {
+            color: $ge_blue;
+        }
+    }
+}
+
+#subscribe {
+    padding-top: 25px;
+    background-color: $ge_blue;
+    #sendButton {
+        background-color: $ge_white;
+        font-weight: 600;
+        font-size: 22px;
+        color: $ge_blue;
+        display: none;
+    }
+    * {
+        color: $ge_white;
+    }
+    h2 {
+        font-weight: 100;
+    }
+    .displayElement {
+        display: none;
+    }
+    #input_email_wrapper {
+        border-bottom: 1px solid $ge_white;
+        * {
+            font-size: 18px;
+        }
+        input {
+            border: none;
+            background-color: $ge_blue;
+            outline: none;
+            margin-top: 7px;
+        }
+        button {
+            padding: 9px;
+            float: right;
+        }
+    }
+    #social {
+        margin: auto 17px;
+        h2 {
+            margin: auto 19px;
+        }
+        img {
+            margin: 4px;
+            height: 52px;
+        }
+    }
+}
+
+footer {
+    display: flex;
+    border-bottom: 8px solid $ge_light_blue;
+    a {
+        color: $ge_black;
+        font-size: 15px;
+    }
+    #site_map {
+        flex-direction: row-reverse;
+    }
+    img {
+        margin: 5px;
+        height: 52px;
+    }
+    #cards img {
+        width: 26px;
+        height: auto;
+        margin: 12px;
+    }
+}

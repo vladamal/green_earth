@@ -1,0 +1,51 @@
+.mySlides {
+    display: none
+  }
+  #slideshow .mySlides img {
+    vertical-align: middle;
+    max-width:100%;
+    max-height:100%;
+    min-width:100%;
+    min-height:100%;
+  }
+  
+  #slideshow {
+    position: relative;
+    figure {
+      margin: 0;
+      figcaption {
+        position: absolute;
+        left: 10%;
+        top: 22%;
+        color: $ge_white;
+        width: 222px;
+        h1 {
+          margin: 0;
+        }
+        button {
+          padding: 8px 16px;
+          color: $ge_white;
+          background-color: $ge_blue;
+        }
+      }
+    }
+  }
+  
+  .arrows {
+    position: absolute;
+    top: 41%;
+    right: 3%;
+  }
+  .arrows * {
+    cursor: pointer;
+    width: auto;
+    padding: 4px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 0 3px 3px 0;
+  }
+  .arrows img {
+    border-radius: 27px;
+  }
+  

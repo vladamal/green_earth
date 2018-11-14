@@ -1,0 +1,22 @@
+[
+    {
+        "path": "images/offers/london.png",
+        "title": "London",
+        "price": 59
+    },
+    {
+        "path": "images/offers/hamburg.png",
+        "title": "Hamburg",
+        "price": 79
+    },
+    {
+        "path": "images/offers/alicante.png",
+        "title": "Alicante",
+        "price": 89
+    },
+    {
+        "path": "images/offers/milano.png",
+        "title": "Milano",
+        "price": 119
+    }
+]

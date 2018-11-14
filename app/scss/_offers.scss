@@ -1,0 +1,96 @@
+
+#inspire {
+    div {
+        text-align: center;
+        margin: 33px auto;
+        * {
+            display: inline;
+        }
+        a {
+            color: $ge_blue;
+            padding: 0 9px;
+            text-decoration: none;
+            h1 {
+                padding-bottom: 3px;
+            }
+            h1 {
+                background-image: linear-gradient(to right, $ge_blue 56%, rgba(255,255,255,0) 0%);
+                background-position: bottom;
+                background-size: 32px 2px;
+                background-repeat: repeat-x;
+            }
+        }
+        > h1 {
+            color: $ge_blue;
+            font-weight: 100;
+        }
+    }
+}
+
+#offers_wrapper {
+    flex-direction: column;
+    [class*="col-"] {
+        float: left;
+    }
+}
+
+@media only screen and (min-width: 968px) {
+    #offers_wrapper {
+        flex-direction: row;
+        &.row { 
+            justify-content: center;
+            display: flex !important;
+        }
+    }
+}
+@media only screen and (min-width: 600px) {
+    #offers_wrapper.row { 
+        display: block;
+    }
+}
+
+#offers {
+    background-color: $ge_blue;
+    padding: 18px;
+    p {
+        color: white;
+        font-size: 16px;
+        margin-bottom: 7px;
+    }
+    div#offers_wrapper {
+        article {
+            margin: -7px;;
+            padding: 0;
+            border: 6px solid $ge_blue;
+            flex-direction: column;
+            background-color: white;
+            align-items: baseline;
+            a {
+                text-decoration: none;
+                padding: 18px;
+            }
+            figure {
+                margin: 0;
+                width: 100%;
+                figcaption {
+                    margin: 11px 0 0 18px;
+                    * {
+                        margin: 0;
+                    }
+                }
+                button {
+                    cursor: pointer;
+                }
+                p {
+                    color: $ge_blue;
+                }
+                img {
+                    width: 100%;
+                }
+            }
+            h3 {
+                color: $ge_blue;
+            }
+        }
+    }
+}

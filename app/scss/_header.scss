@@ -1,0 +1,101 @@
+
+header button,
+header figure {
+    float: right;
+    color: $ge_black;
+}
+
+#header header {
+    section:last-child {
+        float: right;
+        color: $ge_black;
+    }
+    
+}
+
+header section,
+header section figure,
+header section figure * {
+    display: inline;
+}
+#header {
+    nav {
+        display: inline-block;
+        font-size: 28px;
+        color: $ge_blue;
+        font-weight: bold;
+        a {
+            margin-left: 14px;
+            &:last-child {
+                margin-right: 12px;
+            }
+        }
+    }
+
+    
+    #logo {
+        img {
+            margin: 14px auto;
+            height: 71px;
+        }
+    }
+    
+    #land {
+        color: $ge_black;
+        line-height: 1.2;
+        button {
+            font-size: 20px;
+        }
+        figure {
+            font-size: 20px;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            * {
+                margin: auto 4px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #land {
+        button {
+            order: 1;
+            margin-left: auto;
+        }
+    }
+    #header header {
+        #header-right {
+            #nav {
+                justify-content: flex-end;
+            }
+        }
+        #header-right {
+            flex-direction: column-reverse;
+        }
+
+        figure {
+            order: 2;
+            margin-left: 0;
+        }
+    }
+}
+
+// for tablets
+@media only screen and (min-width: 600px) {
+    #header {
+        nav {
+            font-weight: 400;
+            font-size: 20px;
+        }
+        #land {
+            button {
+                font-size: 14px;
+            }
+            figure {
+                font-size: 14px;
+            }
+        }
+    }
+}
