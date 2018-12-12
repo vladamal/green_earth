@@ -1,55 +1,80 @@
+
+.bg-about_3 {
+  width: 97px; height: 98px;
+  background: url('css_sprites.png') -1670px -998px;
+}
+
+.bg-about_2 {
+  width: 97px; height: 98px;
+  background: url('css_sprites.png') -1904px -998px;
+}
+
+.bg-about_1 {
+  width: 97px; height: 98px;
+  background: url('css_sprites.png') -2912px -580px;
+}
+
+.bg-about_0 {
+  width: 97px; height: 98px;
+  background: url('css_sprites.png') -1787px -998px;
+}
+
 #about {
-    color: $ge_black;
-    padding: 28px;
-    #title, header, h1 {
+  padding: 18px;
+  .container__row {
+    flex-wrap: wrap;
+  }
+  #title {
+    flex-direction: column;
+    align-items: center;
+    * {
       margin: 9px auto;
-      text-align: center;
     }
     h1 {
       color: $ge_blue;
-      font-size: 34px;
-      margin-bottom: 21px;
+      text-align: center;
       span {
-        display: inline-block
+        display: block;
+        margin: 0 auto;
       }
     }
     header {
       font-size: 12px;
       color: $ge_grey;
     }
-    .card-about {
-      color: $ge_blue;
-      img {
-        height: 80px;
-        margin: 18px;
-        margin-top: 0;
-      }
-      h4 {
-        font-weight: 200;
-        margin-bottom: 6px;
-        margin-top: 10px;
-      }
-      p {
-        font-size: 12px;
-        margin-top: 0;
-      }
-      div {
-        flex-direction:row
-      }    
-    }
   }
 
-  @media only screen and (max-width: 600px) {
-    #about {
-      padding: 8px;
-      .row {
-        display: block;
+  .card-about {
+    color: $ge_dark_blue;
+    img {
+      height: 80px;
+      margin: 18px;
+      //margin-top: 0;
+    }
+    h4 {
+      font-weight: 200;
+      margin-bottom: 6px;
+      //margin-top: 10px;
+    }
+    p {
+      font-size: 12px;
+      margin-top: 0;
+    }
+    div {
+      margin-right: 18px;
+      flex-direction: row
+    }
+  }
+}
+
+@media only screen and (min-width: 668px) {
+  #about {
+    #title {
+      h1 {
+        span {
+          display: inline;
+        }
       }
     }
   }
-  
-  @media only screen and (max-width: 968px) {
-      #about h1 {
-        font-size: 26px;
-      }
-  }
+}

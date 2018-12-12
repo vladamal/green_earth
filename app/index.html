@@ -3,334 +3,360 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Green Earth</title>
-        <link href="css/styles.css" rel="stylesheet" type="text/css">
+        <link href="styles.css" rel="stylesheet" type="text/css">
     </head>
-    <body>
+    <body class="container">
 
         <!-- Header -->
-        <section id="header">
-            <header class="row">
-                <div class="col-2 col-td-2 col-t-2 col-m-2" id="logo">
-                    <img src="images/logo.png" alt="Green Earth Logo">
+        <header class="container__row" id="header">
+            <div class="col-offset-2 col-1" id="logo">
+                <div class="bg-logo"></div>
+                <!--<img src="images/logo.png" alt="Green Earth Logo">-->
+            </div>
+            <div class="col-10" id="header-right">
+                <div class="container__row">
+                    <div class="col-8 col-sm-7" id="nav">
+                        <nav>
+                            <a href="#about">Info</a>
+                            <a href="#offers">About us</a>
+                            <a href="#subscribe">Contact</a>
+                        </nav>
+                    </div>
+                    <div class="col-4 col-sm-5" id="land">
+                        <button id="login">LOGIN</button>
+                        <div class="separator"></div>
+                        <figure>
+                            <div class="bg-language"></div>
+                            <!--<img src="images/language.png" alt="Language Flag">-->
+                            <figcaption><span class="hidden-sm-down">EN - UK</span> (&#xa3;)</figcaption>
+                        </figure>
+                    </div>
                 </div>
-                <div class="col-10 col-td-10 col-t-10 col-m-10" id="header-right">
-                    
-                        <div class="col-8 col-td-8 col-t-7 col-m-12" id="nav">
-                                <nav>
-                                    <a href="#about">Info</a>
-                                    <a href="#offers">About us</a>
-                                    <a href="#subscribe">Contact</a>
-                                </nav>
+            </div>
+        </header>
+
+        <!-- Content -->
+        <div id="main" class="container--fluid">
+
+            <!-- Slideshow -->
+            <section id="slideshow" class="container__row">
+                <nav class="arrows">
+                    <a class="prev" onclick="plusSlides(-1)">
+                        <div class="bg-arrow_left"></div>
+                        <!--<img src="images/slider/arrow_left.png" alt="Slider Arrow Left">-->
+                    </a>
+
+                    <a class="next" onclick="plusSlides(1)">
+                        <div class="bg-arrow_right"></div>
+                        <!--<img src="images/slider/arrow_right.png" alt="Slider Arrow Right">-->
+                    </a>
+                </nav>
+            </section>
+
+            <!-- About -->
+            <section id="about" class="container--fluid">
+                <div id="title" class="container__row">
+                    <header>LOW COST DOESN'T MEAN CHEAP</header>
+                    <h1>
+                        <span>Fly smart,</span>
+                        <span>fly with Green Earth</span>
+                    </h1>
+                </div>
+                <div class="container__row">
+                    <div class="col-12 col-sm-offset-0 col-sm-6 col-md-offset-1 col-md-5 col-lg-offset-2 col-lg-4 col-xl-offset-2 col-xl-3 card-about">
+                        <div class="bg-about_0"></div>
+                        <!--<img src="images/about/about_0.png" alt="Reclinable Seats">-->
+                        <div>
+                            <h4>Reclinable seats</h4>
+                            <p>Lorem ipsum dolor sit amet, consecteur ipsicing elit, sed do eiusmod tempor inciunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-offset-0 col-sm-6 col-md-offset-0 col-md-5 col-lg-offset-0 col-lg-4 col-xl-offset-2 col-xl-3 card-about">
+                        <div class="bg-about_1"></div>
+                        <!--<img src="images/about/about_1.png" alt="Reclinable Seats">-->
+                        <div>
+                            <h4>Plenty of legroom</h4>
+                            <p>Lorem ipsum dolor sit amet, consecteur ipsicing elit, sed do eiusmod tempor inciunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container__row">
+                    <div class="col-12 col-sm-offset-0 col-sm-6 col-md-offset-1 col-md-5 col-lg-offset-2 col-lg-4 col-xl-offset-2 col-xl-3 card-about">
+                        <div class="bg-about_2"></div>
+                        <!--<img src="images/about/about_2.png" alt="Reclinable Seats">-->
+                        <div>
+                            <h4>Free cabin luggage</h4>
+                            <p>Lorem ipsum dolor sit amet, consecteur ipsicing elit, sed do eiusmod tempor inciunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-offset-0 col-sm-6 col-md-offset-0 col-md-5 col-lg-offset-0 col-lg-4 col-xl-offset-2 col-xl-3 card-about">
+                        <div class="bg-about_3"></div>
+                        <!--<img src="images/about/about_3.png" alt="Reclinable Seats">-->
+                        <div>
+                            <h4>Friendly crew</h4>
+                            <p>Lorem ipsum dolor sit amet, consecteur ipsicing elit, sed do eiusmod tempor inciunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Offers -->
+            <section id="offers" class="container--fluid">
+                <div class="container__row">
+                    <div class="col-12 col-md-offset-1 col-md-6 col-lg-offset-2">
+                        <h1>
+                            <span>Showing</span>
+                            <span>our offers from</span>
+                        </h1>
+                    </div>
+                </div>
+                <div id="offers_wrapper" class="container__row">
+                    <!-- JS loop -->
+                </div>
+                <!--<header>3h left at this rate</header>-->
+            </section>
+
+            <!-- Inspire -->
+            <section id="inspire" class="container__row">
+                <p>Don't know where to go?</p>
+                <a href="#"><p>Let us inspire you</p></a>
+            </section>
+
+            <!-- Tabs Container -->
+            <section id="tabs" class="container__row">
+
+                <!-- Tabs Container Title -->
+                <div id="tabs_title">
+                    <header>QUALITY FROM THE INSIDE</header>
+                    <div>
+                        <h1>Travel the way </h1>
+                        <h1>you want</h1>
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit arnet, consectetur adipisicing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ulnisi ut
+                    </p>
+                    <div id="services_and_upgrades" class="container__row">
+                        <div class="col-md-10 col-lg-8">
+                            <a href="#">View all services & upgrades</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tabs -->
+                <div id="tabs_wrapper" class="container__row">
+
+                    <!-- Tabs Content Container -->
+                    <div id="tab_content" class="col-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+
+                        <!-- Tabs Navigation -->
+                        <div id="tabs_navigation" class="tab container__row">
+                            <button class="tablinks col-4 col-td-4 col-t-4 col-m-4" onclick="openTab(event, 'regular')"
+                                    id="regularBtn">Regular</button>
+                            <button class="tablinks col-4 col-td-4 col-t-4 col-m-4" onclick="openTab(event, 'plus')"
+                                    id="plusBtn">Plus</button>
+                            <button class="tablinks col-4 col-td-4 col-t-4 col-m-4" onclick="openTab(event, 'premium')"
+                                    id="premiumBtn">Premium</button>
+                        </div>
+
+                        <!-- Tabs Content -->
+                        <div id="regular" class="tab-content-wrapper container__row">
+                            <div class="col-12 col-sm-4 tab_cover">
+                                <div class="bg-side_image"></div>
+                                <!--<img src="images/tabs/side_image.png" alt="Side Image">-->
                             </div>
-                            <div class="col-4 col-td-4 col-t-5 col-m-12" id="land">
-                                <button id="login">LOGIN</button>
+                            <div class="col-12 hidden-sm-up">
+                                <h2>Regular</h2>
+                            </div>
+                            <div class="tab_list col-12 col-sm-4">
                                 <figure>
-                                    <img src="images/language.png" alt="Language Flag">
-                                    <figcaption><span class="hide">EN - UK</span> (&#xa3;)</figcaption>
+                                    <div class=".bg-v"></div>
+                                    <!--<img class="v" src="images/tabs/v.png" alt="V icon">-->
+                                    <figcaption>Reclinable seats</figcaption>
+                                </figure>
+                                <figure>
+                                    <div class=".bg-v"></div>
+                                    <!--<img class="v" src="images/tabs/v.png" alt="V icon">-->
+                                    <figcaption>1 hand luggage</figcaption>
+                                </figure>
+                                <figure>
+                                    <div class=".bg-v"></div>
+                                    <!--<img class="v" src="images/tabs/v.png" alt="V icon">-->
+                                    <figcaption>Extra leg room</figcaption>
                                 </figure>
                             </div>
-                </div>
-            
-
-                
-                
-            </header>
-        </section>
-
-        <!-- Slideshow -->
-        <section>
-            <div id="slideshow">
-                <nav class="arrows">
-                    <a class="prev" onclick="plusSlides(-1)"><img src="images/slider/arrow_left.png" alt="Slider Arrow Left"></a>
-                    <a class="next" onclick="plusSlides(1)"><img src="images/slider/arrow_right.png" alt="Slider Arrow Right"></a>
-                </nav>  
-            </div>
-        </section>
-
-        <!-- About -->
-        <section id="about">
-            <div id="title">
-                <header>LOW COST DOESN'T MEAN CHEAP</header>
-                <h1>
-                    <span>Fly smart,</span>
-                    <span>fly with Green Earth</span>
-                </h1>
-            </div>
-            <div class="row">
-                <div class="col-2 col-td-1 hide"></div>
-                <div class="col-3 col-td-4 col-t-6 col-m-12 card-about">
-                    <img src="images/about/about_0.png" alt="Reclinable Seats">
-                    <div>
-                        <h4>Reclinable seats</h4>
-                        <p>Lorem ipsum dolor sit amet, consecteur ipsicing elit, sed do eiusmod tempor inciunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-                <div class="col-1 col-td-1 hide"></div>
-                <div class="col-3 col-td-4 col-t-6 col-m-12 card-about">
-                    <img src="images/about/about_1.png" alt="Reclinable Seats">
-                    <div>
-                        <h4>Plenty of legroom</h4>
-                        <p>Lorem ipsum dolor sit amet, consecteur ipsicing elit, sed do eiusmod tempor inciunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-                <div class="col-2 col-td-1 hide"></div>
-            </div>
-            <div class="row">
-                <div class="col-2 col-td-1 hide"></div>
-                <div class="col-3 col-td-4 col-t-6 col-m-12 card-about">
-                    <img src="images/about/about_2.png" alt="Reclinable Seats">
-                    <div>
-                        <h4>Free cabin luggage</h4>
-                        <p>Lorem ipsum dolor sit amet, consecteur ipsicing elit, sed do eiusmod tempor inciunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-                <div class="col-1 col-td-1 hide"></div>
-                <div class="col-3 col-td-4 col-t-6 col-m-12 card-about">
-                    <img src="images/about/about_3.png" alt="Reclinable Seats">
-                    <div>
-                        <h4>Friendly crew</h4>
-                        <p>Lorem ipsum dolor sit amet, consecteur ipsicing elit, sed do eiusmod tempor inciunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-                <div class="col-2 col-td-1 hide"></div>
-            </div>
-        </section>
-
-        <!-- Offers -->
-        <section id="offers">
-            <div class="row">
-                <div class="col-2 col-td-0 col-t-0 col-m-0"></div>
-                <div class="col-8 col-td-8 col-t-12 col-m-12">
-                    <p>Showing our offers from</p>
-                </div>
-            </div>
-            <div id="offers_wrapper" class="row">
-                <!-- JS loop -->       
-            </div>
-        </section>
-
-        <!-- Inspire -->
-        <section id="inspire" class="row">
-            <div>
-                <h1>Don't know where to go?</h1>
-                <a href="#"><h1>Let us inspire you</h1></a>
-            </div>
-        </section>
-
-        <!-- Tabs Container -->
-        <section id="tabs" class="row">
-
-            <!-- Tabs Container Title -->
-            <div>
-                <header>QUALITY FROM THE INSIDE</header>
-                <div>
-                    <h1>Travel the way </h1><h1>you want</h1>
-                </div>
-                <p>
-                    Lorem ipsum dolor sit arnet, consectetur adipisicing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam, quis nostrud exercitation ulnisi ut
-                </p>
-                <div class="row">
-                    <div class="col-10 col-td-11 col-t-12 col-m-12" id="services_and_upgrades">
-                        <a href="#">View all services & upgrades</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tabs -->
-            <div class="row">
-                <div class="col-2 col-td-1 col-t-0 col-m-1"></div>
-
-                <!-- Tabs Content Container -->
-                <div id="tabs_container" class="col-8 col-td-10 col-t-12 col-m-10">
-
-                    <!-- Tabs Navigation -->
-                    <div id="tabs_navigation" class="tab row">
-                        <button class="tablinks col-4 col-td-4 col-t-4 col-m-4" onclick="openTab(event, 'regular')" 
-                                id="regularBtn">Regular</button>
-                        <button class="tablinks col-4 col-td-4 col-t-4 col-m-4" onclick="openTab(event, 'plus')"
-                                id="plusBtn">Plus</button>
-                        <button class="tablinks col-4 col-td-4 col-t-4 col-m-4" onclick="openTab(event, 'premium')"
-                                id="premiumBtn">Premium</button>
-                    </div>
-
-                    <!-- Tabs Content -->
-                    <div id="regular" class="tabcontent row">
-                        <div id="tab_cover" class="col-3 col-m-12">
-                            <img src="images/tabs/side_image.png" alt="Side Image">
+                            <div class="tab_list col-12 col-sm-4">
+                                <figure>
+                                    <div class=".bg-x"></div>
+                                    <!--<img class="database" src="images/tabs/x.png" alt="V icon">-->
+                                    <figcaption>Extra cabin luggage</figcaption>
+                                </figure>
+                                <figure>
+                                    <div class=".bg-x"></div>
+                                    <!--<img class="database" src="images/tabs/x.png" alt="V icon">-->
+                                    <figcaption>Extra hold luggage</figcaption>
+                                </figure>
+                                <figure>
+                                    <div class=".bg-x"></div>
+                                    <!--<img class="database" src="images/tabs/x.png" alt="V icon">-->
+                                    <figcaption>Lounge access</figcaption>
+                                </figure>
+                            </div>
                         </div>
-                        <div class="col-0 col-td-0 col-t-0 col-m-12">
-                            <h2>Regular</h2>
+
+                        <div id="plus" class="tab-content-wrapper container__row">
+                            <div class="col-12 col-sm-4 tab_cover">
+                                <div class="bg-side_image"></div>
+                                <!--<img src="images/tabs/side_image.png" alt="Side Image">-->
+                            </div>
+                            <div class="col-12 hidden-sm-up">
+                                <h2>Plus</h2>
+                            </div>
+                            <div class="tab_list col-12 col-sm-4">
+                                <figure>
+                                    <div class=".bg-x"></div>
+                                    <!--<img class="database" src="images/tabs/x.png" alt="V icon">-->
+                                    <figcaption>Extra cabin luggage</figcaption>
+                                </figure>
+                                <figure>
+                                    <div class=".bg-x"></div>
+                                    <!--<img class="database" src="images/tabs/x.png" alt="V icon">-->
+                                    <figcaption>Extra hold luggage</figcaption>
+                                </figure>
+                                <figure>
+                                    <div class=".bg-x"></div>
+                                    <!--<img class="database" src="images/tabs/x.png" alt="V icon">-->
+                                    <figcaption>Lounge access</figcaption>
+                                </figure>
+                            </div>
+                            <div class="tab_list col-12 col-sm-4">
+                                <figure>
+                                    <div class=".bg-v"></div>
+                                    <!--<img class="v" src="images/tabs/v.png" alt="V icon">-->
+                                    <figcaption>Reclinable seats</figcaption>
+                                </figure>
+                                <figure>
+                                    <div class=".bg-v"></div>
+                                    <!--<img class="v" src="images/tabs/v.png" alt="V icon">-->
+                                    <figcaption>1 hand luggage</figcaption>
+                                </figure>
+                                <figure>
+                                    <div class=".bg-v"></div>
+                                    <!--<img class="v" src="images/tabs/v.png" alt="V icon">-->
+                                    <figcaption>Extra leg room</figcaption>
+                                </figure>
+                            </div>
                         </div>
-                        <div class="col-4 col-m-12">
-                            <figure class="row">
-                                <img class="v" src="images/tabs/v.png" alt="V icon">
-                                <figcaption>Reclinable seats</figcaption>
-                            </figure>
-                            <figure class="row">
-                                <img class="v" src="images/tabs/v.png" alt="V icon">
-                                <figcaption>1 hand luggage</figcaption>
-                            </figure>
-                            <figure class="row">
-                                <img class="v" src="images/tabs/v.png" alt="V icon">
-                                <figcaption>Extra leg room</figcaption>
-                            </figure>
+
+                        <div id="premium" class="tab-content-wrapper container__row">
+                            <div class="col-12 col-sm-4 tab_cover">
+                                <div class="bg-side_image"></div>
+                                <!--<img src="images/tabs/side_image.png" alt="Side Image">-->
+                            </div>
+                            <div class="col-12 hidden-sm-up">
+                                <h2>Premium</h2>
+                            </div>
+                            <div class="tab_list col-12 col-sm-4">
+                                <figure>
+                                    <div class=".bg-v"></div>
+                                    <!--<img class="v" src="images/tabs/v.png" alt="V icon">-->
+                                    <figcaption>Reclinable seats</figcaption>
+                                </figure>
+                                <figure>
+                                    <div class=".bg-v"></div>
+                                    <!--<img class="v" src="images/tabs/v.png" alt="V icon">-->
+                                    <figcaption>1 hand luggage</figcaption>
+                                </figure>
+                                <figure>
+                                    <div class=".bg-v"></div>
+                                    <!--<img class="v" src="images/tabs/v.png" alt="V icon">-->
+                                    <figcaption>Extra leg room</figcaption>
+                                </figure>
+                            </div>
+                            <div class="tab_list col-12 col-sm-4">
+                                <figure>
+                                    <div class=".bg-x"></div>
+                                    <!--<img class="database" src="images/tabs/x.png" alt="V icon">-->
+                                    <figcaption>Extra cabin luggage</figcaption>
+                                </figure>
+                                <figure>
+                                    <div class=".bg-x"></div>
+                                    <!--<img class="database" src="images/tabs/x.png" alt="V icon">-->
+                                    <figcaption>Extra hold luggage</figcaption>
+                                </figure>
+                                <figure>
+                                    <div class=".bg-x"></div>
+                                    <!--<img class="database" src="images/tabs/x.png" alt="V icon">-->
+                                    <figcaption>Lounge access</figcaption>
+                                </figure>
+                            </div>
                         </div>
-                        <div class="col-4 col-m-12">
-                            <figure class="row">
-                                <img class="database" src="images/tabs/x.png" alt="V icon">
-                                <figcaption>Extra cabin luggage</figcaption>
-                            </figure>
-                            <figure class="row">
-                                <img class="database" src="images/tabs/x.png" alt="V icon">
-                                <figcaption>Extra hold luggage</figcaption>
-                            </figure>
-                            <figure class="row">
-                                <img class="database" src="images/tabs/x.png" alt="V icon">
-                                <figcaption>Lounge access</figcaption>
-                            </figure>
-                        </div>
-                        <div class="col-1 col-m-0"></div>
+
                     </div>
-                          
-                    <div id="plus" class="tabcontent row">
-                            <div id="tab_cover" class="col-3 col-m-12">
-                                    <img src="images/tabs/side_image.png" alt="Side Image">
-                                </div>
-                                <div class="col-0 col-td-0 col-t-0 col-m-12">
-                                    <h2>Plus</h2>
-                                </div>
-                                <div class="col-4 col-m-12">
-                                    <figure class="row">
-                                        <img class="database" src="images/tabs/x.png" alt="V icon">
-                                        <figcaption>Extra cabin luggage</figcaption>
-                                    </figure>
-                                    <figure class="row">
-                                        <img class="database" src="images/tabs/x.png" alt="V icon">
-                                        <figcaption>Extra hold luggage</figcaption>
-                                    </figure>
-                                    <figure class="row">
-                                        <img class="database" src="images/tabs/x.png" alt="V icon">
-                                        <figcaption>Lounge access</figcaption>
-                                    </figure>
-                                </div>
-                                <div class="col-1 col-m-0"></div>
-                                <div class="col-4 col-m-12">
-                                    <figure class="row">
-                                        <img class="v" src="images/tabs/v.png" alt="V icon">
-                                        <figcaption>Reclinable seats</figcaption>
-                                    </figure>
-                                    <figure class="row">
-                                        <img class="v" src="images/tabs/v.png" alt="V icon">
-                                        <figcaption>1 hand luggage</figcaption>
-                                    </figure>
-                                    <figure class="row">
-                                        <img class="v" src="images/tabs/v.png" alt="V icon">
-                                        <figcaption>Extra leg room</figcaption>
-                                    </figure>
-                                </div>
-                    </div>
-                          
-                    <div id="premium" class="tabcontent row">
-                            <div id="tab_cover" class="col-3 col-m-12">
-                                    <img src="images/tabs/side_image.png" alt="Side Image">
-                                </div>
-                                <div class="col-0 col-td-0 col-t-0 col-m-12">
-                                    <h2>Premium</h2>
-                                </div>
-                                <div class="col-4 col-m-12">
-                                    <figure class="row">
-                                        <img class="v" src="images/tabs/v.png" alt="V icon">
-                                        <figcaption>Reclinable seats</figcaption>
-                                    </figure>
-                                    <figure class="row">
-                                        <img class="v" src="images/tabs/v.png" alt="V icon">
-                                        <figcaption>1 hand luggage</figcaption>
-                                    </figure>
-                                    <figure class="row">
-                                        <img class="v" src="images/tabs/v.png" alt="V icon">
-                                        <figcaption>Extra leg room</figcaption>
-                                    </figure>
-                                </div>
-                                <div class="col-4 col-m-12">
-                                    <figure class="row">
-                                        <img class="database" src="images/tabs/x.png" alt="V icon">
-                                        <figcaption>Extra cabin luggage</figcaption>
-                                    </figure>
-                                    <figure class="row">
-                                        <img class="database" src="images/tabs/x.png" alt="V icon">
-                                        <figcaption>Extra hold luggage</figcaption>
-                                    </figure>
-                                    <figure class="row">
-                                        <img class="database" src="images/tabs/x.png" alt="V icon">
-                                        <figcaption>Lounge access</figcaption>
-                                    </figure>
-                                </div>
-                                <div class="col-1 col-m-0"></div>
-                    </div>
-                    
                 </div>
 
-                <div class="col-2 col-td-1 col-t-0 col-m-1"></div>
-            </div>
+            </section>
 
-        </section>
-
-        <!-- Subscribe -->
-        <section id="subscribe" class="row">
-            <div class="col-1 col-td-1 col-t-0 col-m-1"></div>
-            <div class="col-2 col-td-3 col-t-12 col-m-12">
-                <h2>Subscribe to our <span class="displayElement">newsletter</span></h2>
-            </div>
-            <div class="col-3 col-td-5 col-t-12 col-m-12">
-                <div id="input_email_wrapper">
-                    <input type="email" placeholder="Enter your email address">
-                    <button>Send ></button>
+            <!-- Subscribe -->
+            <section id="subscribe" class="container__row">
+                <div class="col-12 col-md-3 col-lg-offset-1 col-lg-2 col-xl-3">
+                    <h2>Subscribe to our <span class="hidden-md-up">newsletter</span></h2>
                 </div>
-            </div>
-            <div class="col-0 col-td-0 col-t-12 col-m-12">
-                <button id="sendButton">Send</button>
-            </div>
-            <div class="col-2 col-td-0 col-t-2 col-m-0"></div>
-            <div class="col-3 col-td-5 col-t-0 hide" id="social">
-                <h2>Follow us</h2>
-                <img src="images/social/fb_white.png" alt="Facebook Icon">
-                <img src="images/social/twtr_white.png" alt="Twitter Icon">
-                <img src="images/social/inst_white.png" alt="Instagram Icon">
-            </div>
-            <!-- <div class="col-1 col-td-1 col-t-0 col-m-1"></div> -->
-        </section>
+                <div class="col-12 col-sm-6 col-md-2 col-lg-1">
+                    <div id="input_email_wrapper">
+                        <input type="email" placeholder="Enter your email address">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-2 col-lg-2">
+                    <button>Send <span class="hidden-lg-down">&#62;</span></button>
+                </div>
+                <div class="hidden-lg-down col-md-offset-1 col-md-4 col-lg-offset-1 col-xl-offset-2" id="social">
+                    <h2>Follow us</h2>
+                    <!--<img src="images/social/fb_white.png" alt="Facebook Icon">-->
+                    <div class="bg-fb_white"></div>
+                    <div class="bg-twtr_white"></div>
+                    <div class=""></div>
+                    <!--<img src="images/social/twtr_white.png" alt="Twitter Icon">-->
+                    <div class="bg-inst_white"></div>
+                    <!--<img src="images/social/inst_white.png" alt="Instagram Icon">-->
+                </div>
+            </section>
+        </div>
 
         <!-- Footer -->
-        <footer class="row">
-            <div class="col-1 col-td-1 col-t-0 col-m-0"></div>
-            <div class="col-0 col-td-0 col-t-12 col-m-12">
-                <h3>Follow us</h3>
+        <footer class="container__row">
+            <div class="col-12 col-sm-12 col-md-12 hidden-lg-up">
+                <h2>Follow us</h2>
             </div>
-            <div class="col-0 col-td-0 col-t-12 col-m-12">
-                <img src="images/social/fb.png" alt="Facebook Icon">
-                <img src="images/social/twtr.png" alt="Twitter Icon">
-                <img src="images/social/inst.png" alt="Instagram Icon">            
+            <div class="col-12 col-sm-8 col-md-4 hidden-lg-up"
+                 id="social_footer">
+                <div class="bg-fb"></div>
+                <!--<img src="images/social/fb.png" alt="Facebook Icon">-->
+                <div class="bg-twtr"></div>
+                <!--<img src="images/social/twtr.png" alt="Twitter Icon">-->
+                <div class="bg-inst"></div>
+                <!--<img src="images/social/inst.png" alt="Instagram Icon">-->
             </div>
-            <div class="col-3 col-td-3 col-t-12 col-m-12" id="cards">
-                <img src="images/cards/mc.png" alt="Master Card Icon">
-                <img src="images/cards/visa.png" alt="Visa Card Icon">
-                <img src="images/cards/amex.png" alt="Amex Card Icon">
-                <img src="images/cards/p.png" alt="P Card Icon">
+            <div class="col-12 col-sm-12 col-md-3 col-lg-offset-1 col-lg-3" id="cards">
+                <!--<img src="images/cards/mc.png" alt="Master Card Icon">-->
+                <div class="bg-mc"></div>
+                <div class="bg-visa"></div>
+                <!--<img src="images/cards/visa.png" alt="Visa Card Icon">-->
+                <div class="bg-amex"></div>
+                <!--<img src="images/cards/amex.png" alt="Amex Card Icon">-->
+                <div class="bg-p"></div>
+                <!--<img src="images/cards/p.png" alt="P Card Icon">-->
             </div>
-            <div class="col-4 col-td-4 col-t-12 col-m-0"></div>
-            <div class="col-3 col-td-3 col-t-12 col-m-12" id="site_map">
+            <div class="col-12 col-sm-12 col-md-3 col-lg-offset-5 col-lg-2" id="site_map">
                 <a href="#">Site Map</a>
                 <a href="#">Terms & Privacy</a>
             </div>
-            <div class="col-1 col-td-1 col-t-0 col-m-0"></div>
         </footer>
-        
-
 
         <!-- Scripts -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="index.js"></script>
+
     </body>
 </html>

@@ -1,17 +1,20 @@
 var slideIndex = 1;
 var slides = [
   {
-      "path": "images/slider/GreenEarth_1.png",
+      // "path": "images/slider/GreenEarth_1.png",
+      "class": "bg-GreenEarth_1",
       "title": "Enjoy our hot summer deals",
       "price": 69.50
   },
   {
-      "path": "images/slider/GreenEarth_2.png",
+      // "path": "images/slider/GreenEarth_2.png",
+      "class": "bg-GreenEarth_2",
       "title": "Enjoy our hot summer deals",
       "price": 89.50
   },
   {
-      "path": "images/slider/GreenEarth_3.png",
+      // "path": "images/slider/GreenEarth_3.png",
+      "class": "bg-GreenEarth_3",
       "title": "Enjoy our hot summer deals",
       "price": 109.50
   }
@@ -64,10 +67,9 @@ $(document).ready(function () {
   
         figure.className = 'mySlides fade';
         figure.appendChild(figcaption);
-  
-        var image = new Image();
-        image.src = slide.path;
-        image.alt = slide.title + ' Slide';
+
+          var image = document.createElement('div');
+          image.classList.add(slide.class);
         figure.appendChild(image);
   
         slideshow.appendChild(figure);

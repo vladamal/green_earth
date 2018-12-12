@@ -1,44 +1,74 @@
 
-@media only screen and (max-width: 968px) {
-    #input_email_wrapper {
-        button {
-            width: 63%;
-            display: none;
-        }
-    }
-    #sendButton {
-        display: block !important;
-        width: 35%;
-        margin: 13px;
-    }
-    .displayElement {
-        display: initial !important;
-    }
-    footer, #subscribe {
-        flex-direction: column;
-        [class*="col-"] {
-            padding: 5px 0px;
-        }
-        * {
-            justify-content: center;
-        }
-    }
-    footer {
-        h3 {
-            color: $ge_blue;
-        }
-    }
+
+.bg-amex {
+  width: 84px; height: 24px;
+  background: url('css_sprites.png') -2794px -940px;
 }
 
+.bg-twtr {
+  width: 120px; height: 120px;
+  background: url('css_sprites.png') -1530px -998px;
+}
+
+.bg-twtr_white {
+  width: 61px; height: 60px;
+  background: url('css_sprites.png') -2496px -1150px;
+}
+
+.bg-fb {
+  width: 120px; height: 120px;
+  background: url('css_sprites.png') -2692px -800px;
+}
+
+.bg-fb_white {
+  width: 61px; height: 60px;
+  background: url('css_sprites.png') -2334px -1150px;
+}
+
+.bg-mc {
+  width: 76px; height: 58px;
+  background: url('css_sprites.png') -2021px -998px;
+}
+
+.bg-p {
+  width: 44px; height: 50px;
+  background: url('css_sprites.png') -2117px -998px;
+}
+
+.bg-inst {
+  width: 120px; height: 120px;
+  background: url('css_sprites.png') -2832px -800px;
+}
+
+.bg-inst_white {
+  width: 61px; height: 60px;
+  background: url('css_sprites.png') -2415px -1150px;
+}
+
+.bg-visa {
+  width: 82px; height: 26px;
+  background: url('css_sprites.png') -2692px -940px;
+}
+
+
+
 #subscribe {
-    padding-top: 25px;
-    background-color: $ge_blue;
-    #sendButton {
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 25px;
+  background-color: $ge_blue;
+  [class*="col-"] * {
+    width: 100%;
+  }
+  div:first-child {
+    text-align: center;
+  }
+    button {
         background-color: $ge_white;
         font-weight: 600;
         font-size: 22px;
         color: $ge_blue;
-        display: none;
+      height: 54px;
     }
     * {
         color: $ge_white;
@@ -46,10 +76,9 @@
     h2 {
         font-weight: 100;
     }
-    .displayElement {
-        display: none;
-    }
     #input_email_wrapper {
+      margin-top: 23px;
+      margin-bottom: 14px;
         border-bottom: 1px solid $ge_white;
         * {
             font-size: 18px;
@@ -65,21 +94,87 @@
             float: right;
         }
     }
-    #social {
-        margin: auto 17px;
-        h2 {
-            margin: auto 19px;
-        }
-        img {
-            margin: 4px;
-            height: 52px;
-        }
+}
+
+
+@media only screen and (min-width: 576px) {
+  #subscribe {
+    [class*="col-"] * {
+      width: auto;
     }
+    #input_email_wrapper {
+      input {
+        width: 555px;
+      }
+    }
+  }
+}
+
+@media (min-width:576px) and (max-width:1200px) {
+  #subscribe {
+    button {
+      width: 333px !important;
+    }
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #subscribe {
+    flex-direction: row;
+    button {
+      width: auto;
+      margin: 0;
+      padding-right: 0;
+      background-color: transparent;
+      font-size: 16px;
+      font-weight: normal;
+      color: $ge_white;
+      border-bottom: 1px solid $ge_white;
+    }
+    #input_email_wrapper {
+      margin-right: 0;
+      input {
+        width: auto;
+      }
+    }
+    #social {
+      display: flex;
+      h2 {
+        margin: auto 19px;
+        margin-left: 0 !important;
+      }
+      img {
+        margin: 4px;
+        height: 52px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  footer {
+    [class*="col-"] {
+      * {
+        margin: 18px !important;
+      }
+    }
+    #social_footer img {
+      margin: 3px !important;
+    }
+  }
 }
 
 footer {
-    display: flex;
+    flex-direction: column;
     border-bottom: 8px solid $ge_light_blue;
+  padding: 13px;
+  box-sizing: border-box;
+  * {
+    justify-content: center;
+  }
+  h2 {
+    color: $ge_blue;
+    font-weight: normal;
+  }
     a {
         color: $ge_black;
         font-size: 15px;
@@ -87,13 +182,25 @@ footer {
     #site_map {
         flex-direction: row-reverse;
     }
-    img {
-        margin: 5px;
-        height: 52px;
+  img {
+    height: 62px;
+  }
+    #cards {
+      img {
+        height: 18px;
+      }
     }
-    #cards img {
-        width: 26px;
-        height: auto;
-        margin: 12px;
+}
+
+@media only screen and (min-width: 1200px) {
+  footer {
+    padding: 22px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    [class*="col-"] {
+      * {
+        margin: auto;
+      }
     }
+  }
 }

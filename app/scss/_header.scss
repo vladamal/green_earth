@@ -1,101 +1,88 @@
 
-header button,
-header figure {
-    float: right;
-    color: $ge_black;
+.bg-logo {
+  width: 73px; height: 71px;
+  background: url('css_sprites.png') -2912px -698px;
+}
+.bg-language {
+  width: 48px; height: 24px;
+  background: url('css_sprites.png') -2898px -940px;
 }
 
-#header header {
-    section:last-child {
-        float: right;
-        color: $ge_black;
-    }
-    
-}
-
-header section,
-header section figure,
-header section figure * {
-    display: inline;
-}
 #header {
+  .separator {
+    border-left: 1px solid $ge_light_grey;
+    margin: auto 0;
+    height: 15px;
+    margin-right: 18px;
+  }
+  #header-right {
+    padding-right: 24px;
+    .container__row {
+      align-items: flex-end;
+      > * {
+        margin: 0;
+      }
+    }
     nav {
-        display: inline-block;
-        font-size: 28px;
+      font-size: 18px;
+      font-weight: bold;
+      margin: 0;
+      a {
         color: $ge_blue;
-        font-weight: bold;
-        a {
-            margin-left: 14px;
-            &:last-child {
-                margin-right: 12px;
-            }
+        text-decoration: none;
+        margin: auto 14px;
+        &:first-child {
+          margin-left: 4px;
         }
+        &:last-child {
+          margin-right: 4px;
+        }
+      }
     }
-
-    
-    #logo {
+    #land {
+      color: $ge_black;
+      button {
+        margin-right: 0;
+      }
+      figure {
+        margin: 0;
+        display: flex;
+        align-items: center;
         img {
-            margin: 14px auto;
-            height: 71px;
+          width: 33px;
+          margin-right: 9px;
         }
+      }
     }
-    
-    #land {
-        color: $ge_black;
-        line-height: 1.2;
-        button {
-            font-size: 20px;
-        }
-        figure {
-            font-size: 20px;
-            margin: 0;
-            display: flex;
-            align-items: center;
-            * {
-                margin: auto 4px;
-            }
-        }
+  }
+  #logo {
+    margin: 15px;
+    img {
+      width: 55px;
     }
+  }
 }
 
-@media only screen and (max-width: 600px) {
-    #land {
-        button {
-            order: 1;
-            margin-left: auto;
-        }
+@media only screen and (max-width: 370px) {
+  #header-right {
+    nav a {
+      margin: auto 4px !important;
+      font-size: 14px;
     }
-    #header header {
-        #header-right {
-            #nav {
-                justify-content: flex-end;
-            }
-        }
-        #header-right {
-            flex-direction: column-reverse;
-        }
-
-        figure {
-            order: 2;
-            margin-left: 0;
-        }
+    * {
+      font-size: 12px;
     }
+  }
 }
 
-// for tablets
-@media only screen and (min-width: 600px) {
-    #header {
-        nav {
-            font-weight: 400;
-            font-size: 20px;
-        }
-        #land {
-            button {
-                font-size: 14px;
-            }
-            figure {
-                font-size: 14px;
-            }
-        }
+// for tablets and higher
+@media only screen and (min-width: 576px) {
+  #header {
+    #header-right {
+      nav {
+        font-weight: normal;
+        font-size: 20px;
+      }
     }
+  }
 }

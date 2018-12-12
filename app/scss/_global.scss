@@ -1,34 +1,25 @@
-@media only screen and (max-width: 800px) {
-    .hide {
-        display: none !important
-    }
-}
-
 body {
-    font-family: $font-stack;
-    color: $primary-color;
-    background-color: $background-color;
-    margin: 0;
-  }
-  
-  button {
-    border: none;
-    outline: none;
-    background-color: transparent;
-    padding: 18px;
-  }
-  button:hover {
+  font-family: $font-stack;
+  color: $primary-color;
+  background-color: $background-color;
+  margin: 0;
+}
+* {
+  outline: none;
+}
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  padding: 18px;
+  &:hover {
     background-color: lightgray;
   }
-  
-  
-  a {
-    display: inline-block;
-  }
-  a:not(:hover) {
-      text-decoration: none;
-  }
-  
-button, a {
-    cursor: pointer;
+}
+
+a {
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
 }

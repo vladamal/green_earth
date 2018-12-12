@@ -1,51 +1,105 @@
-.mySlides {
-    display: none
+
+.bg-arrow_left {
+  width: 50px; height: 50px;
+  background: url('css_sprites.png') -2972px -870px;
+}
+
+.bg-arrow_right {
+  width: 50px; height: 50px;
+  background: url('css_sprites.png') -2972px -800px;
+}
+
+.bg-GreenEarth_1 {
+  width: 1500px; height: 550px;
+  background: url('css_sprites.png') -1530px -10px;
+}
+
+.bg-GreenEarth_2 {
+  width: 1500px; height: 550px;
+  background: url('css_sprites.png') -10px -580px;
+}
+
+.bg-GreenEarth_3 {
+  width: 1500px; height: 550px;
+  background: url('css_sprites.png') -10px -10px;
+}
+
+
+
+#slideshow {
+  position: relative;
+  .mySlides {
+    width: 100%;
+    display: none;
+    min-height: 100%;
+    img {
+      width: 100%;
+    }
   }
-  #slideshow .mySlides img {
-    vertical-align: middle;
-    max-width:100%;
-    max-height:100%;
-    min-width:100%;
-    min-height:100%;
+  .arrows {
+    position: absolute;
+    top: 60%;
+    right: 3%;
+    img {
+      border-radius: 27px;
+    }
+    * {
+      cursor: pointer;
+      width: 34px;
+      padding: 4px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      border-radius: 0 3px 3px 0;
+    }
   }
-  
-  #slideshow {
-    position: relative;
-    figure {
-      margin: 0;
-      figcaption {
-        position: absolute;
-        left: 10%;
-        top: 22%;
+  figure {
+    margin: 0;
+    figcaption {
+      position: absolute;
+      left: 11%;
+      top: 32%;
+      color: $ge_white;
+      width: 333px;
+      p {
+        margin: 7px auto;
+      }
+      h1 {
+        margin: 0;
+      }
+      button {
+        padding: 8px 16px;
         color: $ge_white;
-        width: 222px;
-        h1 {
-          margin: 0;
-        }
-        button {
-          padding: 8px 16px;
-          color: $ge_white;
-          background-color: $ge_blue;
-        }
+        background-color: $ge_blue;
       }
     }
   }
-  
-  .arrows {
-    position: absolute;
-    top: 41%;
-    right: 3%;
+}
+
+@media only screen and (min-width: 576px) {
+  #slideshow {
+    figcaption {
+      width: 222px !important;
+    }
+    .arrows {
+      top: 37%;
+      * {
+        width: auto;
+      }
+    }
   }
-  .arrows * {
-    cursor: pointer;
-    width: auto;
-    padding: 4px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    border-radius: 0 3px 3px 0;
+}
+
+@media only screen and (min-width: 892px) {
+  #slideshow {
+    .arrows {
+      top: 42%;
+    }
+    figcaption {
+      width: 257px !important;
+      h1 {
+        font-size: 36px;
+      }
+    }
   }
-  .arrows img {
-    border-radius: 27px;
-  }
-  
+}

@@ -1,22 +1,26 @@
 
 var offers_json = [
   {
-      "path": "images/offers/london.png",
+      // "path": "images/offers/london.png",
+      "class": "bg-london",
       "title": "London",
       "price": 59
   },
   {
-      "path": "images/offers/hamburg.png",
+      // "path": "images/offers/hamburg.png",
+      "class": "bg-hamburg",
       "title": "Hamburg",
       "price": 79
   },
   {
-      "path": "images/offers/alicante.png",
+      // "path": "images/offers/alicante.png",
+      "class": "bg-landungsbrucken",
       "title": "Alicante",
       "price": 89
   },
   {
-      "path": "images/offers/milano.png",
+      // "path": "images/offers/milano.png",
+      "class": "bg-milano",
       "title": "Milano",
       "price": 119
   }
@@ -29,9 +33,8 @@ $(document).ready(function () {
     offers_json.map(function(img) {
       var figure = document.createElement('figure');
 
-      var image = new Image();
-      image.src = img.path;
-      image.alt = img.title + ' Offer';
+      var image = document.createElement('div');
+      image.classList.add(img.class);
       figure.appendChild(image);
 
       var figcaption = document.createElement('figcaption');      
@@ -51,7 +54,7 @@ $(document).ready(function () {
       button.appendChild(h3_button);
 
       var article = document.createElement('article');
-      article.className = 'col-2 col-td-3 col-t-6 col-m-12';
+      article.className = 'col-12 col-sm-6 col-md-5 col-lg-2';
       article.appendChild(figure);
       article.appendChild(button);
 

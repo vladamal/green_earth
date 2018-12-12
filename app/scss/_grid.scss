@@ -1,90 +1,92 @@
 
+$grid__cols: 12;
+$grid__bp-sm: 576;
+$grid__bp-md: 892;
+$grid__bp-lg: 1200;
+$grid__bp-xl: 1600;
 
-.col-m-0 { display: none;}
-.col-m-1 {width: 8.33%;}
-.col-m-2 {width: 16.66%;}
-.col-m-3 {width: 25%;}
-.col-m-4 {width: 33.33%;}
-.col-m-5 {width: 41.66%;}
-.col-m-6 {width: 50%;}
-.col-m-7 {width: 58.33%;}
-.col-m-8 {width: 66.66%;}
-.col-m-9 {width: 75%;}
-.col-m-10 {width: 83.33%;}
-.col-m-11 {width: 91.66%;}
-.col-m-12 {width: 100%;}
+$map-grid-props: (
+        '': 0,
+        '-sm': $grid__bp-sm,
+        '-md': $grid__bp-md,
+        '-lg': $grid__bp-lg,
+        '-xl': $grid__bp-xl
+);
 
-[class*="col-"] {
+@mixin create-mq($breakpoint, $min-or-max) {
+  @if($breakpoint == 0) {
+    @content;
+  } @else {
+    @media screen and (#{$min-or-max}-width: $breakpoint *1px) {
+      @content;
+    }
+  }
+}
+
+
+@mixin create-col-classes($modifier, $grid-cols, $breakpoint) {
+  @include create-mq($breakpoint, 'min') {
+    .col#{$modifier}-offset-0 {
+      margin-left: 0;
+    }
+    @for $i from 1 through $grid-cols {
+      .col#{$modifier}-#{$i} {
+        flex-basis: (100 / ($grid-cols / $i) ) * 1%;
+      }
+      .col#{$modifier}-offset-#{$i} {
+        margin-left: (100 / ($grid-cols / $i) ) * 1%;
+      }
+    }
+  }
+}
+
+@each $modifier , $breakpoint in $map-grid-props {
+  @if($modifier == '') {
+    $modifier: '-xs';
+  }
+  @include create-mq($breakpoint - 1, 'max') {
+    .hidden#{$modifier}-down {
+      display: none !important;
+    }
+  }
+  @include create-mq($breakpoint, 'min') {
+    .hidden#{$modifier}-up {
+      display: none !important;
+    }
+  }
+}
+
+.container {
+  max-width: 1980px;
+  margin: 0 auto;
+  &--fluid {
+    margin: 0;
+    max-width: 100%;
+  }
+  &__row {
     display: flex;
-    align-items: center;
-    padding: 5px;
-}
-
-.justify-right {
-    justify-content: flex-end;
-}
-
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-.row { 
-    display: flex; 
+    flex-wrap: nowrap;
     width: 100%;
+  }
+  [class*="col-"] {
+    display: flex;
+    * {
+      margin: auto;
+    }
+  }
+}
+  @each $modifier , $breakpoint in $map-grid-props {
+    @include create-col-classes($modifier, $grid__cols, $breakpoint);
+  }
+
+
+#header-right .container__row {
+  flex-direction: column-reverse;
 }
 
-
-/* For tablets: */
-@media only screen and (min-width: 600px) and (max-width: 968px) {
-    .justify { justify-content: flex-start !important; }
-    
-    .col-t-0 { display: none;}
-    .col-t-1 {width: 8.33%;}
-    .col-t-2 {width: 16.66%;}
-    .col-t-3 {width: 25%;}
-    .col-t-4 {width: 33.33%;}
-    .col-t-5 {width: 41.66%;}
-    .col-t-6 {width: 50%;}
-    .col-t-7 {width: 58.33%;}
-    .col-t-8 {width: 66.66%;}
-    .col-t-9 {width: 75%;}
-    .col-t-10 {width: 83.33%;}
-    .col-t-11 {width: 91.66%;}
-    .col-t-12 {width: 100%;}
+@media screen and (min-width: 450px) {
+  #header-right .container__row {
+    flex-direction: row;
+    align-items: center !important;
+  }
 }
-
-/* For desktop: */
-@media only screen and (min-width: 968px) and (max-width: 1311px) {
-    .col-td-0 { display: none; }
-    .col-td-1 {width: 8.33%;}
-    .col-td-2 {width: 16.66%;}
-    .col-td-3 {width: 25%;}
-    .col-td-4 {width: 33.33%;}
-    .col-td-5 {width: 41.66%;}
-    .col-td-6 {width: 50%;}
-    .col-td-7 {width: 58.33%;}
-    .col-td-8 {width: 66.66%;}
-    .col-td-9 {width: 75%;}
-    .col-td-10 {width: 83.33%;}
-    .col-td-11 {width: 91.66%;}
-    .col-td-12 {width: 100%;}
-}
-@media only screen and (min-width: 1311px) {
-    .col-0 { display: none;}
-    .col-1 {width: 8.33%;}
-    .col-2 {width: 16.66%;}
-    .col-3 {width: 25%;}
-    .col-4 {width: 33.33%;}
-    .col-5 {width: 41.66%;}
-    .col-6 {width: 50%;}
-    .col-7 {width: 58.33%;}
-    .col-8 {width: 66.66%;}
-    .col-9 {width: 75%;}
-    .col-10 {width: 83.33%;}
-    .col-11 {width: 91.66%;}
-    .col-12 {width: 100%;}
-}
-
-
-
