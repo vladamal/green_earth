@@ -1,20 +1,20 @@
 var slideIndex = 1;
 var slides = [
   {
-      // "path": "images/slider/GreenEarth_1.png",
-      "class": "bg-GreenEarth_1",
+      "class": "greenearth-1",
+      "path": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABdwAAAImAQMAAABzVdrWAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAHtJREFUeNrtwQEBAAAAgiD/r25IQAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAiwGWHQABdinOswAAAABJRU5ErkJggg==",
       "title": "Enjoy our hot summer deals",
       "price": 69.50
   },
   {
-      // "path": "images/slider/GreenEarth_2.png",
-      "class": "bg-GreenEarth_2",
+      "class": "greenearth-2",
+      "path": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABdwAAAImAQMAAABzVdrWAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAHtJREFUeNrtwQEBAAAAgiD/r25IQAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAiwGWHQABdinOswAAAABJRU5ErkJggg==",
       "title": "Enjoy our hot summer deals",
       "price": 89.50
   },
   {
-      // "path": "images/slider/GreenEarth_3.png",
-      "class": "bg-GreenEarth_3",
+      "class": "greenearth-3",
+      "path": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABdwAAAImAQMAAABzVdrWAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAHtJREFUeNrtwQEBAAAAgiD/r25IQAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAiwGWHQABdinOswAAAABJRU5ErkJggg==",
       "title": "Enjoy our hot summer deals",
       "price": 109.50
   }
@@ -68,7 +68,9 @@ $(document).ready(function () {
         figure.className = 'mySlides fade';
         figure.appendChild(figcaption);
 
-          var image = document.createElement('div');
+          var image = new Image();
+          image.src = slide.path;
+          image.alt = slide.title + ' Slide';
           image.classList.add(slide.class);
         figure.appendChild(image);
   

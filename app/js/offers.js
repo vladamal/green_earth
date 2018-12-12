@@ -1,25 +1,25 @@
 
 var offers_json = [
   {
-      // "path": "images/offers/london.png",
+      "path": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAjEAAAGNAQMAAADaQbIkAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAADJJREFUeNrtwQENAAAAwqD3T20PBxQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD8GG+oAAGTvzxoAAAAAElFTkSuQmCC",
       "class": "bg-london",
       "title": "London",
       "price": 59
   },
   {
-      // "path": "images/offers/hamburg.png",
+      "path": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAjEAAAGOAQMAAABc1cCKAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAADJJREFUeNrtwTEBAAAAwqD1T+1vBqAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAN2/wAAGMUSHZAAAAAElFTkSuQmCC",
       "class": "bg-hamburg",
       "title": "Hamburg",
       "price": 79
   },
   {
-      // "path": "images/offers/alicante.png",
+      "path": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAjEAAAGNAQMAAADaQbIkAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAADJJREFUeNrtwQENAAAAwqD3T20PBxQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD8GG+oAAGTvzxoAAAAAElFTkSuQmCC",
       "class": "bg-landungsbrucken",
       "title": "Alicante",
       "price": 89
   },
   {
-      // "path": "images/offers/milano.png",
+      "path": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAjEAAAGNAQMAAADaQbIkAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAADJJREFUeNrtwQENAAAAwqD3T20PBxQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD8GG+oAAGTvzxoAAAAAElFTkSuQmCC",
       "class": "bg-milano",
       "title": "Milano",
       "price": 119
@@ -33,7 +33,9 @@ $(document).ready(function () {
     offers_json.map(function(img) {
       var figure = document.createElement('figure');
 
-      var image = document.createElement('div');
+        var image = new Image();
+        image.src = img.path;
+        image.alt = img.title + ' Offer';
       image.classList.add(img.class);
       figure.appendChild(image);
 
