@@ -77,4 +77,5 @@ $(document).ready(function () {
         slideshow.appendChild(figure);
         slideshow.dispatchEvent(event);
       });
+      showSlides(1);
 });
